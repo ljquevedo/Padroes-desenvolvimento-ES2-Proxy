@@ -1,6 +1,4 @@
-Engenharia de softare 2 
-Leandro Quevedo 
-
+Trabalho – Padrão de Projeto: Proxy
 1. Introdução aos Padrões de Projeto (GoF)
 Os padrões de projeto descritos pela Gang of Four (GoF) ajudam a resolver problemas recorrentes em projetos orientados a objetos. Eles trazem soluções reutilizáveis, melhoram a comunicação entre desenvolvedores e tornam o código mais flexível e fácil de manter.
 2. Categoria do Padrão Proxy
@@ -56,3 +54,5 @@ Aqui o Proxy controla o acesso, adiciona lógica extra e cria o objeto real apen
 10. Conclusão
 O padrão Proxy é extremamente útil em sistemas que precisam controlar acesso, melhorar performance ou proteger recursos sensíveis. Ele oferece flexibilidade, mantém o princípio da responsabilidade única e permite adicionar comportamentos sem alterar o objeto real.
 
+Slides da disciplina – Engenharia de Software II
+GOF – Design Patterns (1994)
