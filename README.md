@@ -7,51 +7,21 @@ O padrão Proxy pertence ao grupo de padrões estruturais. Segundo os slides est
 O padrão Proxy fornece um objeto substituto que controla o acesso a outro objeto. É útil quando desejamos adicionar comportamentos extras ao acessar um objeto real, como controle de acesso, logging, cache, lazy load ou comunicação remota.
 4. Problema que o Proxy Resolve
 Em diversos casos, não queremos que o código cliente acesse diretamente um objeto complexo, pesado ou sensível. O Proxy atua como intermediário, protegendo o objeto real e adicionando lógica adicional sem modificar o código já existente.
-5. Exemplo Sem o Padrão Proxy
-class ServicoReal:
-    def operacao(self):
-        print('Executando operação pesada...')
-
-cliente = ServicoReal()
-cliente.operacao()
-
-Neste cenário, o cliente acessa diretamente o serviço real.
-6. Exemplo Com o Padrão Proxy
-class ServicoReal:
-    def operacao(self):
-        print('Executando operação pesada...')
-
-class ProxyServico:
-    def __init__(self):
-        self._servico = None
-
-    def operacao(self):
-        if self._servico is None:
-            print('Criando instância real...')
-            self._servico = ServicoReal()
-
-        print('Verificando permissões...')
-        self._servico.operacao()
-
-cliente = ProxyServico()
-cliente.operacao()
-
-Aqui o Proxy controla o acesso, adiciona lógica extra e cria o objeto real apenas quando necessário.
-7. Tipos de Proxy Comuns
+6. Tipos de Proxy Comuns
 - Proxy Virtual: cria objetos sob demanda (lazy load)
 - Proxy de Proteção: controla permissões de acesso
 - Proxy Remoto: representa objetos em outro servidor
 - Proxy Cache: armazena resultados para evitar recomputação
-8. Vantagens do Proxy
+7. Vantagens do Proxy
 - Controle total sobre o acesso ao objeto real
 - Permite criar objetos sob demanda, economizando recursos
 - Pode adicionar comportamentos sem alterar o código existente
 - Útil para cache, logging e segurança
-9. Desvantagens do Proxy
+8. Desvantagens do Proxy
 - Aumenta a complexidade do código
 - Pode adicionar atrasos devido à camada intermediária
 - Em alguns casos, pode ser confundido com Decorator
-10. Conclusão
+9. Conclusão
 O padrão Proxy é extremamente útil em sistemas que precisam controlar acesso, melhorar performance ou proteger recursos sensíveis. Ele oferece flexibilidade, mantém o princípio da responsabilidade única e permite adicionar comportamentos sem alterar o objeto real.
 
 Slides da disciplina – Engenharia de Software II
